@@ -8,7 +8,270 @@
 }
 
 :root {
-    --sidebar-bg: #38bdf8;
+    --sidebar-bg: #1992d4;
     --main-bg: #e2e8f0;
     --card-border: #fde047;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--main-bg);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+/* --------------sidebar------------- */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    background-color: var(--sidebar-bg);
+    color: #fff;
+    padding: 1.525rem 1.525rem;
+}
+
+.sidebar img {
+    width: 27px;
+    height: auto;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    margin-right: 1.5rem;
+}
+
+.sidebar p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.top-sidebar {
+    display: flex;
+    align-items: center;
+}
+
+.top-sidebar img {
+    width: 40px;
+    height: auto;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    margin-right: 1.2rem;
+}
+
+.top-sidebar p {
+    font-size: 1.45rem;
+    font-weight: 900;
+}
+
+.middle-sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+}
+
+.middle-sidebar > div {
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.middle-sidebar .home {
+    display: flex;
+    align-items: center;
+}
+
+.middle-sidebar .profile {
+    display: flex;
+    align-items: center;
+}
+
+.middle-sidebar .messages {
+    display: flex;
+    align-items: center;
+}
+
+.middle-sidebar .history {
+    display: flex;
+    align-items: center;
+}
+
+.middle-sidebar .tasks {
+    display: flex;
+    align-items: center;
+}
+
+.middle-sidebar .communities {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+}
+
+.bottom-sidebar > div {
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.bottom-sidebar .settings {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-sidebar .support {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-sidebar .privacy {
+    display: flex;
+    align-items: center;
+}
+
+/* --------------------main body---------- */
+
+.container {
+    width: 100%;
+}
+
+.header { 
+    padding: 0.8rem 2rem;
+    box-shadow: 0 2px 3px rgb(175, 175, 175);
+    background-color: #fff;
+}
+
+.header, .top-header {
+    width: 100%;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-header .left-section-header-top {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.left-section-header-top img {
+    width: 30px;
+    height: auto;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    margin-right: 0.7rem;
+}
+
+.left-section-header-top input {
+    border: none;
+    border-radius: 25px;
+    background-color: var(--main-bg);
+    width: 100%;
+    height: 23px;
+}
+
+.top-header .right-section-header-top {
+    display: flex;
+    align-items: center;
+}
+
+.right-section-header-top .bell-ring {
+    width: 25px;
+    height: auto;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    margin-right: 1rem;
+}
+
+.right-section-header-top .trend4 {
+    width: 50px;
+    height: auto;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--main-bg);
+}
+
+.right-section-header-top p {
+    font-size: 0.99rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.bottom-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+}
+
+.bottom-header .left-section-header-bottom {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-header .left-section-header-bottom img {
+    width: 70px;
+    height: auto;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    margin-right: 1.25rem;
+    border-radius: 50%;
+    border: 1px solid var(--main-bg);
+}
+
+.left-section-header-bottom-name p:first-child {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.35rem;
+}
+
+.left-section-header-bottom-name p:nth-child(2) {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.bottom-header .right-section-header-bottom {
+    display: flex;
+    align-items: end;
+    margin-bottom: 0.85rem;
+}
+
+.bottom-header .right-section-header-bottom button {
+    border: none;
+    text-align: center;
+    background-color: var(--sidebar-bg);
+    color: #fff;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: 80px;
+    padding: 7px 10px;
+    margin-left: 2rem;
+}
+
+/* resize images for a better view before changing */
+.top-header img, .bottom-header img{
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+/* -------------cards styles------------ */
+
+.main {
+    background-color: var(--main-bg);
+    width: 100%;
+    box-shadow: 0 2px 3px rgb(175, 175, 175);
+    padding: 1rem 0.65rem;
+    margin-top: 0.4rem;
 }
