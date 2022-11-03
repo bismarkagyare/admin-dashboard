@@ -259,7 +259,7 @@ html, body {
 }
 
 /* resize images for a better view before changing */
-.top-header img, .bottom-header img{
+.trending img{
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
@@ -274,4 +274,44 @@ html, body {
     box-shadow: 0 2px 3px rgb(175, 175, 175);
     padding: 1rem 0.65rem;
     margin-top: 0.4rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.2rem;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.2rem;
+}
+
+.projects .card {
+    box-shadow: 0 2px 3px rgb(175, 175, 175);
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-left: 7px solid var(--card-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .card-text h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.card .card-text p {
+    font-size: 13px;
+    color: rgb(88, 88, 88);
+}
+
+.card .card-icons {
+    display: flex;
+    justify-content: end;
+}
+
+.card .card-icons img {
+    margin-left: 1.1rem;
 }
