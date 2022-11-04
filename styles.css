@@ -82,26 +82,8 @@ html, body {
     align-items: center;
 }
 
-.middle-sidebar .profile {
-    display: flex;
-    align-items: center;
-}
-
-.middle-sidebar .messages {
-    display: flex;
-    align-items: center;
-}
-
-.middle-sidebar .history {
-    display: flex;
-    align-items: center;
-}
-
-.middle-sidebar .tasks {
-    display: flex;
-    align-items: center;
-}
-
+.middle-sidebar .profile, .middle-sidebar .messages,
+.middle-sidebar .history, .middle-sidebar .tasks,
 .middle-sidebar .communities {
     display: flex;
     align-items: center;
@@ -118,20 +100,12 @@ html, body {
     text-transform: capitalize;
 }
 
-.bottom-sidebar .settings {
-    display: flex;
-    align-items: center;
-}
-
-.bottom-sidebar .support {
-    display: flex;
-    align-items: center;
-}
-
+.bottom-sidebar .settings, .bottom-sidebar .support,
 .bottom-sidebar .privacy {
     display: flex;
     align-items: center;
 }
+
 
 /* --------------------main body---------- */
 
@@ -314,4 +288,72 @@ html, body {
 
 .card .card-icons img {
     margin-left: 1.1rem;
+}
+
+.announcement-trending-card {
+    display: grid;
+    grid-template-columns: auto;
+    /* grid-template-rows: 1fr 1fr; */
+    gap: 3rem;
+}
+
+.announcement-card, .trending-card {
+    box-shadow: 0 2px 3px rgb(175, 175, 175);
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 1.5rem;
+}
+
+.announcement h2, .trending h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.announcement h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.announcement hr {
+    margin: 15px 0;
+}
+
+.announcement p {
+    font-size: 12px;
+    color: rgb(88, 88, 88);
+}
+
+.trending-card img {
+    width: 50px;
+    height: auto;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--main-bg);
+}
+
+.first-trend, .second-trend,
+.third-trend, .fourth-trend {
+    display: flex;
+    align-items: center;
+}
+
+.second-trend,
+.third-trend, .fourth-trend {
+    margin-top: 1.2rem;
+}
+
+.trending-card p:nth-child(1) {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.trending-card p:nth-child(2) {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: rgb(88, 88, 88);
 }
